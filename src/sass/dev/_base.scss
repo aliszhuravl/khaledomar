@@ -1,0 +1,104 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  background-color: #EEEFF5;
+}
+
+body {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font: $font-normal 14px/1.5 $font-family;
+  font-weight: normal;
+  font-style: normal;
+  color: $color-black;
+}
+
+a {
+  transition: color, .2s;
+  
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+
+h1 {
+  font-weight: normal;
+  margin-top: 0;
+  font-family: $font-family-deco-italic;
+  font-size: 48px;
+  margin-bottom: 24px;
+  line-height: 48px;
+  font-style: normal;
+}
+
+h2 {
+  font-weight: normal;
+  margin-top: 0;
+  font-family: $font-family-deco;
+  font-size: 32px;
+  line-height: 36px;
+  margin-bottom: 20px;
+  font-style: normal;
+}
+
+h3 {
+  font-weight: normal;
+  margin-top: 0;
+  font-family: $font-family-deco;
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 16px;
+  font-style: normal;
+}
+
+.section_title .short_h2 {
+  max-width: 480px;
+  min-width: inherit;
+  width: max-content;
+}
+
+.blue {
+  font-family: $font-family-deco-italic;
+  color: $color-blue;
+}
+
+.light {
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+.mt_60 {
+  margin-top: 60px;
+}
+
+.min-mg {
+  margin-bottom: 32px !important;
+}
+
+.fs-16 {
+  font-size: 16px;
+}
+
+.light-italic {
+  font-size: 14px;
+  font-family: $font-family_italic;
+  opacity: 0.7;
+}
+
+.no-marg {
+  margin-bottom: 0 !important;
+}
+
+.h2-32 {
+  font-size: 32px !important;
+  line-height: 36px !important;
+}

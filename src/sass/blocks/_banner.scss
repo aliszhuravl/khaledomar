@@ -1,0 +1,153 @@
+.main_banner {
+  width: 100%;
+  padding: 0 !important;
+    &_slide {
+      width: 100%;
+      border-radius: 12px;
+      height: 500px;
+      padding-right: 50px;
+      position: relative;
+      overflow: hidden;
+      video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+        &__content {
+          position: relative;
+          z-index: 2;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          width: 100%;
+          &_inner {
+            width: 40%;
+            color: #fff;
+              h1 {
+                color: #E0E7FF;
+                opacity: 0.85;
+              }
+              .subtitle {
+                font-family: $font-family_italic;
+                opacity: 0.7;
+                font-size: 14px;
+                margin-bottom: 20px;
+                letter-spacing: 0.2px;
+                max-width: 80%;
+              }
+          }
+        }
+    }
+}
+
+.slider_title, .slider_desc, .bt_slide {
+  opacity: 0 !important;
+}
+
+.title_animate {
+  opacity: 0.85 !important;
+  transition: all 0.7s;
+}
+
+.desc_animate {
+  opacity: 0.7 !important;
+  transition: all 0.7s;
+}
+
+.bt_animate {
+  opacity: 1 !important;
+  transition: all 0.7s;
+}
+
+.slide_lips {
+  background-image: url('../img/banner_01.jpg');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+ }
+
+// ------------------- баннер обратной связи -------------------
+
+.banner {
+  width: 100%;
+  background-image: url('../img/banner.jpg');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  padding-top: 60px !important;
+    .section_title {
+      padding-left: 180px;
+        &__main {
+          max-width: 100%;
+        }
+        h2 {
+          font-family: $font-family-deco-italic;
+          max-width: 700px;
+        }
+    }
+  .section_content {
+    margin-bottom: 0;
+  }
+  .section_content_simple {
+    width: 100%;
+  }
+
+  .form {
+    margin-top: 40px;
+    width: fit-content;
+    .input_container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .form__item {
+      border: 0;
+      border-bottom: 1px solid #fff;
+      border-radius: 0;
+      padding-left: 0;
+      color: #fff;
+      margin-right: 32px;
+      min-width: 240px;
+      &::-webkit-input-placeholder {
+        text-transform: uppercase;
+        color: #fff;
+      }
+      &::-moz-placeholder {
+        text-transform: uppercase;
+        color: #fff;
+      }
+      &:focus::-webkit-input-placeholder {color: transparent; transition: color .3s;}
+      &:focus::-moz-placeholder          {color: transparent; transition: color .3s;}
+    }
+    .agreement {
+      a, p {
+        color: #fff;
+        opacity: 0.6;
+      }
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.banner_subtitle {
+  font-size: 12px;
+  opacity: 0.5;
+  max-width: 320px;
+  margin-bottom: 32px;
+}
+
+.big-text-banner {
+  .section_title h2 {
+    max-width: 840px;
+  }
+  .banner_subtitle {
+    max-width: 540px;
+  }
+}
