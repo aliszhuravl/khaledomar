@@ -16,7 +16,7 @@ $(function() {
         infinite: true,
         cssEase:'linear',
         slidesToShow: 2,
-        arrows: false,
+        arrows: true,
         variableWidth: true,
         centerMode: false,
         responsive: [
@@ -126,6 +126,34 @@ $(function() {
         infinite: true,
         cssEase: 'linear',
         slidesToShow: 4,
+        centermode: false,
+        speed: 300,
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 2,
+                    arrows: false,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 1,
+                    arrows: false,
+                    dots: true
+                }
+            }
+        ]
+    });
+
+    $('.patient-slider').slick({
+        dots: true,
+        infinite: true,
+        cssEase: 'linear',
+        slidesToShow: 3,
         centermode: false,
         speed: 300,
         arrows: false,

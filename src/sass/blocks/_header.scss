@@ -43,6 +43,7 @@
     }
     .back-call {
       display: flex;
+      align-items: center;
       .link {
         margin-right: 16px;
         display: block;
@@ -50,11 +51,29 @@
         font-family: $font-family_italic;
       }
       .link_mini {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         margin-right: 0;
-        opacity: 0.8;
+        opacity: 1;
         color: $color-blue;
         font-family: $font-family_italic;
-        text-decoration: underline;
+        padding: 6px 12px;
+        border-radius: 40px;
+        height: 36px;
+        border: 1px solid $color-blue;
+        &:hover,
+        &:focus {
+          border-color: #4A60AF;
+          background-color: transparent;
+          color: #4A60AF;
+          text-decoration: none;
+          span.icon-arrow {
+            &:before {
+              color: #4A60AF;
+            }
+          }
+        }
       }
     }
   }

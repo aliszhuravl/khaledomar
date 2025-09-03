@@ -935,7 +935,45 @@
     }
   }
 
+  .gradient-01 {
+    background-position: bottom left;
+  }
+
+  .about-doc {
+    .section_content__box {
+      flex-direction: column-reverse;
+        .left {
+          margin-bottom: 0;
+          .img_container {
+            height: 700px;
+            img {
+              object-position: top center;
+            }
+          }
+        }
+      &:after {
+        top: auto !important;
+        bottom: 10%;
+        right: 0 !important;
+      }
+    }
+  }
+  .patient {
+    margin-bottom: -20px;
+  }
+
+  .page-result {
+    .seo-text {
+      margin-bottom: 0;
+    }
+  }
+
+
 }
+
+
+
+
 
 //----------------------------------------------------------640----------------------------------------------------------
 
@@ -2354,6 +2392,53 @@
 
   .c_opened {
     bottom: 0;
+  }
+
+  .about-doc {
+    .section_content__box {
+      flex-direction: column-reverse;
+      .left {
+        margin-bottom: 0;
+        .img_container {
+          height: 500px;
+          img {
+            object-position: top center;
+            object-fit: contain;
+          }
+        }
+        .video-card {
+          right: 0;
+          left: auto !important;
+          bottom: 20px;
+          top: auto !important;
+        }
+      }
+      .right {
+        margin-bottom: 20px;
+        .graph img {
+          width: 100px;
+        }
+      }
+    }
+  }
+
+  .page-result {
+    .personal_slider .ps_slide {
+      height: 250px;
+    }
+  }
+
+  .patient {
+    .after-title {
+      margin-bottom: 20px;
+    }
+    .for-patient .patient-slider .tile__item {
+      align-items: flex-start;
+      height: 180px;
+      p:last-child {
+        font-size: 16px !important;
+      }
+    }
   }
 
 

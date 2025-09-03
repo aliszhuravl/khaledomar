@@ -145,3 +145,24 @@
   animation-name: fadeInUp;
   -webkit-animation-name: fadeInUp;
 }
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(1em, -100em);
+  }
+}
+
+@keyframes gr-rotate {
+  0% {
+    transform: scale(1) and translate3d(0, 0, 0);
+  }
+  40% {
+    transform: scale(2.5) and translate3d(20px, -2px, -85px);
+  }
+  70% {
+    transform: translate3d(42px, -62px, -135px);
+  }
+  100% {
+    transform: scale(1) and translate3d(0, 0, 0);
+  }
+}

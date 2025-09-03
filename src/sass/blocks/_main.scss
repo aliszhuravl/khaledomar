@@ -111,7 +111,14 @@
 .gradient {
   background-image: url('../img/gradient.png');
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: inherit;
+  background-attachment: local;
+}
+
+.gradient-01 {
+  background-image: url('../img/gradient-01.png');
+  background-repeat: no-repeat;
+  background-position: inherit;
 }
 
 .services_block {
@@ -119,6 +126,7 @@
 }
 
 .block-link {
+  position: relative;
   width: 100%;
   height: 80px;
   display: flex;
@@ -128,10 +136,29 @@
   color: #fff;
   font-size: 16px;
   text-decoration: none;
+  overflow: hidden;
+  &:after {
+    opacity: 0.5;
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -100%;
+    bottom: -50%;
+    left: -200%;
+    background: linear-gradient(to bottom, rgba(229, 172, 142, 0), rgba(255,255,255,0.5) 50%, rgba(229, 172, 142, 0));
+    transform: rotateZ(60deg) translate(-5em, 7.5em);
+    animation: sheen 3s forwards;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
   &:hover {
     background-color: #4A60AF;
   }
 }
+
+
+
+
 
 .dark-blue {
   background-color: $color-dark;
@@ -169,4 +196,101 @@
 
 .section_content_short {
   margin-top: 60px;
+}
+
+.about-doc .page__item {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  .section_content {
+    margin-bottom: 0;
+  }
+  .section_content__box {
+    position: relative;
+    align-items: flex-start;
+    .left {
+      position: relative;
+      z-index: 2;
+      .video-card {
+        position: absolute;
+        z-index: 3;
+        left: 0;
+        top: 0;
+        background-color: $color-blue;
+        width: 60px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        img {
+          width: 20px;
+          height: 20px;
+          display: block;
+          object-fit: contain;
+        }
+      }
+    }
+    .right {
+      position: relative;
+      z-index: 2;
+    }
+    &:after {
+      z-index: 1;
+      width: 600px;
+      height: 600px;
+      content: '';
+      position: absolute;
+      right: 40%;
+      top: -10%;
+      background-image: url('../img/gr-mini.png');
+      background-repeat: no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain;
+      animation: gr-rotate 5s forwards;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+    }
+  }
+}
+
+.for-patient {
+  .patient-slider {
+    .slick-dots {
+      bottom: -40px;
+    }
+
+    .slick-dots li button {
+      background-color: $color-border;
+    }
+    .slick-dots li.slick-active button {
+      background-color: $color-blue;
+    }
+    .tile__item {
+      padding: 20px;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      p {
+        font-size: 20px;
+        transition: all 0.3s;
+        line-height: 24px;
+        font-family: $font-family-medium-italic;
+      }
+      .num {
+        color: $color-blue;
+        font-size: 54px;
+        line-height: 64px;
+        font-family: $font-family-deco;
+      }
+      &:hover {
+        transition: all 0.3s;
+        p {
+          color: $color-blue;
+          transition: all 0.3s;
+        }
+      }
+    }
+
+  }
 }
