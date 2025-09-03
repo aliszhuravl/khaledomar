@@ -12,3 +12,4 @@ $(window).load(function(){
         $('.cookie_window').addClass('c_opened');
     });
 });
+

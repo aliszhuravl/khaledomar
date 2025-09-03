@@ -75,7 +75,7 @@ $(function() {
         arrows: false,
         fade: true,
         autoplay: true,
-        autoplaySpeed: 5000,
+        autoplaySpeed: 4700,
         centerMode: false
     });
 
@@ -255,6 +255,7 @@ $(function() {
             $('.bt_slide').addClass('bt_animate');
         },500);
 
+
     });
 
     $('.slider_main').on('beforeChange', function(){
@@ -263,6 +264,14 @@ $(function() {
             $('.slider_desc').removeClass('desc_animate');
             $('.bt_slide').removeClass('bt_animate');
         },100);
+
+        // var currentSlide = $(slick.$slides[currentSlide]);
+        // var video = currentSlide.find('video');
+        // if (video.length) {
+        //     video[0].pause(); // Ставим на паузу
+        //     video[0].currentTime = 0; // Сбрасываем на начало
+        // }
+
     });
 
     $('.slider-for').init( function(){
